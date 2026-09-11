@@ -1,0 +1,49 @@
+.book-details-route-container {
+  padding: 40px 5%;
+  background-color: #f8fafc;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.book-details-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+}
+.book-main-info {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.book-main-info img {
+  width: 180px;
+  height: 240px;
+  border-radius: 6px;
+}
+.book-main-info h1 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  color: #1e293b;
+  margin: 0 0 10px 0;
+}
+.book-main-info p {
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #475569;
+  margin: 0 0 10px 0;
+}
+.book-details-content h1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #1e293b;
+  margin-top: 20px;
+}
+.book-details-content p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+}

@@ -1,0 +1,156 @@
+.bookshelves-route-container {
+  display: flex;
+  min-height: 80vh;
+  padding: 20px 5%;
+  background-color: #f8fafc;
+}
+.shelves-sidebar {
+  width: 25%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-right: 20px;
+  height: fit-content;
+}
+.shelves-sidebar h1 {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+.shelves-buttons-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.shelf-button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #64748b;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+}
+.active-shelf {
+  color: #0284c7;
+  font-weight: bold;
+}
+.bookshelves-view-container {
+  width: 75%;
+}
+.header-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.header-search-container h1 {
+  font-family: 'Roboto';
+  font-size: 24px;
+  color: #1e293b;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 4px 8px;
+}
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 6px;
+  font-size: 14px;
+  width: 200px;
+}
+.search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  outline: none;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.books-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.book-item {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+.book-link {
+  display: flex;
+  text-decoration: none;
+}
+.book-item img {
+  width: 120px;
+  height: 160px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+.book-details-card h1 {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #334155;
+  margin: 0 0 8px 0;
+}
+.book-details-card p {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #64748b;
+  margin: 0 0 8px 0;
+}
+.rating-container,
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.star-icon {
+  color: #eab308;
+}
+.status-text {
+  color: #0284c7;
+  font-weight: 500;
+}
+.failure-view-container,
+.no-books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+.failure-view-container img,
+.no-books-container img {
+  width: 200px;
+  margin-bottom: 16px;
+}
+.failure-view-container button {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto';
+}
