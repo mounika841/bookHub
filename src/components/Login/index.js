@@ -54,60 +54,60 @@ class Login extends Component {
     const jwtToken = Cookies.get('jwt_token')
 
     if (jwtToken !== undefined) {
-      return <Redirect to="/" />
+      return <Redirect to='/' />
     }
 
     return (
-      <div className="login-form-container">
+      <div className='login-form-container'>
         <img
-          src="https://ccbp.in"
-          className="login-website-logo-desktop-image"
-          alt="website login"
+          src='https://ccbp.in'
+          className='login-website-logo-desktop-image'
+          alt='website login'
         />
 
-        <form className="form-container" onSubmit={this.submitForm}>
+        <form className='form-container' onSubmit={this.submitForm}>
           <img
-            src="https://ccbp.in"
-            className="login-website-logo-mobile-image"
-            alt="login website logo"
+            src='https://ccbp.in'
+            className='login-website-logo-mobile-image'
+            alt='login website logo'
           />
 
-          <h1 className="login-heading">Book Hub</h1>
+          <h1 className='login-heading'>Book Hub</h1>
 
-          <div className="input-container">
-            <label className="input-label" htmlFor="username">
+          <div className='input-container'>
+            <label className='input-label' htmlFor='username'>
               USERNAME
             </label>
             <input
-              type="text"
-              id="username"
-              className="username-input-field"
+              type='text'
+              id='username'
+              className='username-input-field'
               value={username}
               onChange={this.onChangeUsername}
-              placeholder="Username"
+              placeholder='Username'
             />
           </div>
 
-          <div className="input-container">
-            <label className="input-label" htmlFor="password">
+          <div className='input-container'>
+            <label className='input-label' htmlFor='password'>
               PASSWORD
             </label>
             <input
-              type="password"
-              id="password"
-              className="password-input-field"
+              type='password'
+              id='password'
+              className='password-input-field'
               value={password}
               onChange={this.onChangePassword}
-              placeholder="Password"
+              placeholder='Password'
             />
           </div>
 
-          <button type="submit" className="login-button">
+          <button type='submit' className='login-button'>
             Login
           </button>
 
           {/* Test 103 కోసం ఎస్టరిస్క్ (*) గుర్తు లేకుండా మెసేజ్ మాత్రమే చూపిస్తున్నాము */}
-          {showError && <p className="error-message">{errorMsg}</p>}
+          {showError && <p className='error-message'>{errorMsg}</p>}
         </form>
       </div>
     )
