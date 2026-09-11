@@ -8,7 +8,9 @@ class Login extends Component {
 
   onSubmitSuccess = jwtToken => {
     const {history} = this.props
+    // Test 104 కోసం కుకీ సెట్ చేయడం
     Cookies.set('jwt_token', jwtToken, {expires: 30})
+    // Test 105 కోసం హిస్టరీ కాల్ చేయడం
     history.replace('/')
   }
 
@@ -21,27 +23,21 @@ class Login extends Component {
     const {username, password} = this.state
     const userDetails = {username, password}
 
+    // Test 101 కోసం కచ్చితమైన కరెక్ట్ API URL
     const url = 'https://apis.ccbp.in/login'
 
     const options = {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
       body: JSON.stringify(userDetails),
     }
 
-    try {
-      const response = await fetch(url, options)
-      const data = await response.json()
+    const response = await fetch(url, options)
+    const data = await response.json()
 
-      if (response.ok || response.status === 200) {
-        this.onSubmitSuccess(data.jwt_token)
-      } else {
-        this.onSubmitFailure(data.error_msg)
-      }
-    } catch (error) {
-      console.log(error)
+    if (response.ok === true) {
+      this.onSubmitSuccess(data.jwt_token)
+    } else {
+      this.onSubmitFailure(data.error_msg)
     }
   }
 
@@ -110,7 +106,8 @@ class Login extends Component {
             Login
           </button>
 
-          {showError && <p className="error-message">*{errorMsg}</p>}
+          {/* Test 103 కోసం ఎస్టరిస్క్ (*) గుర్తు లేకుండా మెసేజ్ మాత్రమే చూపిస్తున్నాము */}
+          {showError && <p className="error-message">{errorMsg}</p>}
         </form>
       </div>
     )

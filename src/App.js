@@ -1,4 +1,4 @@
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom' // ఇక్కడ BrowserRouter తీసివేయబడింది
 
 import Login from './components/Login'
 import Home from './components/Home'
@@ -33,24 +33,23 @@ const bookshelvesList = [
 ]
 
 const App = () => (
-  <BrowserRouter>
-    <Switch>
-      <Route exact path="/login" component={Login} />
+  // ఇక్కడ నుండి <BrowserRouter> తీసివేసాము, కేవలం <Switch> తో స్టార్ట్ అవుతుంది
+  <Switch>
+    <Route exact path="/login" component={Login} />
 
-      <ProtectedRoute exact path="/" component={Home} />
-      <ProtectedRoute
-        exact
-        path="/shelf"
-        render={props => (
-          <Bookshelves {...props} bookshelvesList={bookshelvesList} />
-        )}
-      />
+    <ProtectedRoute exact path="/" component={Home} />
+    <ProtectedRoute
+      exact
+      path="/shelf"
+      render={props => (
+        <Bookshelves {...props} bookshelvesList={bookshelvesList} />
+      )}
+    />
 
-      <ProtectedRoute exact path="/books/:id" component={BookDetails} />
+    <ProtectedRoute exact path="/books/:id" component={BookDetails} />
 
-      <Route component={NotFound} />
-    </Switch>
-  </BrowserRouter>
+    <Route component={NotFound} />
+  </Switch>
 )
 
 export default App
