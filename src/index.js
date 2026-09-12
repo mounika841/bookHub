@@ -6,7 +6,9 @@ import App from './App'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter> {/* App ని BrowserRouter లోపల ఉంచాలి */}
+    <BrowserRouter>
+      {' '}
+      {/* App ని BrowserRouter లోపల ఉంచాలి */}
       <App />
     </BrowserRouter>
   </React.StrictMode>,
